@@ -51,9 +51,9 @@ public class ProductServiceTest {
 	public void testGetProduct() throws Exception {
 		Product product = new Product();
 		
-		product = productService.getProduct(10125);
+		product = productService.getProduct(10124);
 		
-		Assert.assertEquals(10125, product.getProdNo());
+		Assert.assertEquals(10124, product.getProdNo());
 		Assert.assertEquals("testProdName", product.getProdName());
 		Assert.assertEquals(1111, product.getPrice());
 		Assert.assertEquals("20240923", product.getManuDate());
@@ -66,7 +66,7 @@ public class ProductServiceTest {
 	
 	//@Test
 	public void testUpdateProduct() throws Exception{
-		Product product = productService.getProduct(10125);
+		Product product = productService.getProduct(10124);
 		Assert.assertNotNull(product);
 		
 		Assert.assertEquals("testProdName", product.getProdName());
@@ -83,7 +83,7 @@ public class ProductServiceTest {
 		
 		productService.updateProduct(product);
 		
-		product = productService.getProduct(10125);
+		product = productService.getProduct(10124);
 		Assert.assertNotNull(product);
 		
 		Assert.assertEquals("change", product.getProdName());
